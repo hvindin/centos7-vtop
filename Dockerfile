@@ -5,5 +5,5 @@ RUN yum fs filter languages en:US && yum fs filter documentation \
     && yum clean all -y && npm -g install vtop && chmod +x /usr/bin/dumb-init \
     && useradd vtop
 USER vtop
-LABEL base.os="centos7" base.version="7.3.1611" htop.version="0.4.2"
+LABEL base.os="centos7" base.version="7.3.1611" htop.version="0.4.2" docker.cmd="docker run --pid host -ti --rm docker.io/hvindin/centos7-vtop"
 ENTRYPOINT ["/usr/bin/dumb-init","--","/usr/bin/vtop"]
