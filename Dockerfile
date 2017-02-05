@@ -5,7 +5,7 @@ RUN yum fs filter languages en:US && yum fs filter documentation \
     && yum clean all -y && npm -g install vtop && chmod +x /usr/bin/dumb-init \
     && useradd vtop
 USER vtop
-LABEL base.os="centos7" base.version="7.3.1611" vtop.version="0.4.2" in.ind.hcv.centos7.vtop.vcs-ref-short="d301df6"
+LABEL base.os="centos7" base.version="7.3.1611" vtop.version="0.4.2" in.ind.hcv.centos7.vtop.vcs-ref-short="d301df6" \
       org.label-schema.schema-version="1.0" org.label-cehma.docker.cmd="docker run --pid host -ti --rm docker.io/hvindin/centos7-vtop" \
       org.label-schema.build-date="2017-02-05 20:07:19+11:00" org.label-schema.name="centos7-vtop" \
       org.label-schema.description="centos7 container running vtop, a graphic view of system resource usage" \
